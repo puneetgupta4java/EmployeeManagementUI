@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <h2>Employee Management System</h2>
+  </div>
+  <div class="row">
+    <button class="btn btn-outline-primary col col-4 mybutton"
+    [routerLink]="['/ems/add']" routerLinkActive="router-link-active" >Add Employee</button>
+  <button class="btn btn-primary col col-4 mybutton"
+    [routerLink]="['/ems/display']" routerLinkActive="router-link-active" >Display Employee</button>
+  </div>
+
+  <router-outlet></router-outlet>
+</div>

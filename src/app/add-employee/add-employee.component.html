@@ -1,0 +1,75 @@
+<div class="container">
+  <div class="row">
+    <div class="col col-6">
+      <form [formGroup]="profileForm"
+            (submit)="onAddEmployee()">
+        <br>
+        <h2>Enter Employee Details :</h2> <br>
+        <label>
+          First Name:
+          <input type="text"
+                 formControlName="firstName"
+                 class="form-control"
+                 required>
+        </label>
+        <br>
+        <label>
+          Last Name:
+          <input type="text"
+                 formControlName="lastName"
+                 class="form-control"
+                 required>
+        </label>
+        <br>
+        <label>
+          Department Name:
+          <input type="text"
+                 formControlName="department"
+                 class="form-control"
+                 required>
+        </label>
+        <br>
+        <div formGroupName="address">
+          <h3>Address</h3>
+
+          <label>
+            Street:
+            <input type="text"
+                   formControlName="street"
+                   class="form-control">
+          </label>
+          <br>
+          <label>
+            City:
+            <input type="text"
+                   formControlName="city"
+                   class="form-control">
+          </label>
+          <br>
+          <label>
+            State:
+            <input type="text"
+                   formControlName="state"
+                   class="form-control">
+          </label>
+          <br>
+          <label>
+            Zip Code:
+            <input type="text"
+                   formControlName="zipcode"
+                   class="form-control">
+          </label>
+          <br>
+        </div>
+        <button type="submit"
+                class="btn btn-submit">Submit</button>
+
+      </form><br><br>
+    </div>
+    <div class="col col-6">
+      <p class="employee-count">
+        Total number of employees : {{ employeeCount }}
+      </p>
+    </div>
+  </div>
+</div>

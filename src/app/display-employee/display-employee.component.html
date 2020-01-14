@@ -1,0 +1,36 @@
+<div *ngIf="employeesList.length !== 0">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Department</th>
+        <th scope="col">Street</th>
+        <th scope="col">City</th>
+        <th scope="col">State</th>
+        <th scope="col">Zipcode</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employeesList; index as i">
+        <th scope="row">{{ i + 1 }}.</th>
+        <td> {{ employee.firstName }}</td>
+        <td> {{ employee.lastName }} </td>
+        <td> {{ employee.department }}</td>
+        <td> {{ employee.address.street }}</td>
+        <td> {{ employee.address.city }}</td>
+        <td> {{ employee.address.state }}</td>
+        <td> {{ employee.address.zipcode }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button class="btn btn-warning"
+          (click)="clearData()">Clear data</button>
+
+</div>
+<div *ngIf="employeesList.length === 0">
+  <br /><br />
+  <h4>No Employees Found</h4>
+</div>
